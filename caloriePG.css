@@ -1,0 +1,148 @@
+/* === Base (Desktop 1920x1080) === */
+body {
+    margin: 0;
+    font-family: 'Arial Black', sans-serif;
+    background-color: #111;
+    color: #fff;
+}
+
+.meal-section fieldset {
+    border: none;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.High-Calorie {
+    background: linear-gradient(135deg, #623603, #490303);
+}
+
+.Low-Calorie {
+    background: linear-gradient(135deg, #0b381d, #1d5e5a);
+}
+
+.meal-flex {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; /* so it stacks on smaller screens */
+    justify-content: center;
+}
+
+.High-Calorie,
+.Low-Calorie {
+    flex: 1 1 300px;
+    max-width: 400px;
+}
+
+.meal-section h3 {
+    margin-top: 0;
+    font-size: 1.2em;
+}
+
+.meal-section ul {
+    padding-left: 20px;
+}
+
+.meal-section ul li {
+    margin-bottom: 8px;
+    font-size: 1em;
+}
+
+.cal-count {
+    background: linear-gradient(135deg, #2e0757, #1c3356);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.calc-form {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.calc-form input {
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1em;
+}
+
+.calc-form button {
+    padding: 8px 15px;
+    background-color: #e50914;
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.calc-form button:hover {
+    background-color: #b00610;
+}
+
+.total-display {
+    margin-top: 15px;
+    font-size: 1.2em;
+}
+
+/* === Tablet (1280x800) === */
+@media (max-width: 1280px) {
+    .meal-section fieldset {
+        padding: 15px;
+    }
+
+    .meal-section h3 {
+        font-size: 1.1em;
+    }
+
+    .meal-section ul li {
+        font-size: 0.95em;
+    }
+
+    .calc-form {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+}
+
+/* === Mobile (640x800) === */
+@media (max-width: 640px) {
+    .meal-flex {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .High-Calorie,
+    .Low-Calorie {
+        max-width: 100%;
+        flex: 1 1 auto;
+    }
+
+    .meal-section fieldset {
+        padding: 12px;
+    }
+
+    .meal-section h3 {
+        font-size: 1em;
+        text-align: center;
+    }
+
+    .meal-section ul li {
+        font-size: 0.9em;
+    }
+
+    .calc-form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .calc-form input,
+    .calc-form button {
+        width: 100%;
+        font-size: 1em;
+    }
+}
